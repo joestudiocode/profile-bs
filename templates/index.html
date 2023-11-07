@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile</title>
+    <link rel="stylesheet" href="../static/style/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-name">Jaohar Bahy Dwi Tanto</div>
+      <ul class="navbar-content">
+        <li class="link-contain"><a href="">Home</a></li>
+        <li class="link-contain"><a href="">About</a></li>
+        <li class="link-contain"><a href="">Portofolio</a></li>
+        <li class="link-contain">
+          <a href="https://wa.me/6281295648070">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="container">
+      <div class="personal">
+        <h1 class="bigName">I'm Jaohar</h1>
+        <h4 class="Class">Student | Management Information</h4>
+        <svg height="35" width="200">
+          <line
+            x1="0"
+            y1="15"
+            x2="200"
+            y2="15"
+            style="stroke: #52799c; stroke-width: 2" />
+        </svg>
+        <p>
+          I am an Informatics Management student with an interest in technology
+          and design. I believe that technology is the power of change, and
+          design is my way of expressing ideas. Here, I share my insights, work,
+          and thoughts in these two fields. Feel free to collaborate or talk
+          further. Let's continue to explore the world of technology and design
+          together!
+        </p>
+        <button class="button-contact"><a href="">Contact Me</a></button>
+      </div>
+
+      <div class="image-contain">
+        <img
+          src="../static/assets/image/SVG/Asset-1.svg"
+          alt="peopleskateSVG"
+          height="565px" />
+      </div>
+    </section>
+    <div class="sosial-medias">
+      <div class="sosial-media-icon">
+        <a href="https://wa.me/6281295648070"
+          ><img src="../static/assets/image/SVG/whatsapp.svg" alt="whatsapp"
+        /></a>
+      </div>
+      <div class="sosial-media-icon">
+        <a href="https://www.instagram.com/jaoharfs_/">
+          <img src="../static/assets/image/SVG/instagram.svg" alt="instagram"
+        /></a>
+      </div>
+      <div class="sosial-media-icon">
+        <a href="https://www.facebook.com/jojoku.simatawayang"
+          ><img src="../static/assets/image/SVG/facebook.svg" alt="facebook"
+        /></a>
+      </div>
+      <div class="sosial-media-icon">
+        <a href="https://github.com/joestudiocode"
+          ><img src="../static/assets/image/SVG/github.svg" alt="github"
+        /></a>
+      </div>
+    </div>
+    <section class="portofolio"></section>
+    <script type="text/javascript">
+      window.addEventListener("scroll", function () {
+        let nav = document.querySelector("nav");
+        nav.classList.toggle("sticky", window.scrollY > 10);
+      });
+
+      const selectElement = document.querySelector(".toggle-switch");
+
+      selectElement.addEventListener("change", (event) => {
+        const result = document.querySelector(".result");
+        result.textContent = `You like ${event.target.value}`;
+      });
+    </script>
+  </body>
+</html>

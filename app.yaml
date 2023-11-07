@@ -1,0 +1,11 @@
+runtime: python39
+
+handlers:
+- url: /static/css
+  static_dir: static/style
+
+- url: /static/assets/font
+  static_dir: static/assets/font
+
+- url: /static/assets/image
+  static_dir: static/assets/image

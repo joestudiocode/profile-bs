@@ -1,0 +1,295 @@
+*,
+html {
+  padding: 0;
+  margin: 0;
+  font-family: Poppins;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../static/assets/font/Poppins-Medium.otf");
+}
+
+:root {
+  --primary: #52799c;
+  --text: white;
+  --second: #2b4b68;
+  --ahover: rgb(199, 199, 199);
+}
+
+body {
+  height: 400vh;
+}
+
+.navbar {
+  display: flex;
+  position: fixed;
+  height: 7rem;
+  width: 100%;
+  font-size: 18px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: transparent;
+  z-index: 999;
+  transition: 0.6s;
+}
+
+nav.sticky {
+  z-index: 999;
+  color: var(--text);
+  background-color: var(--primary);
+  height: 3rem;
+  box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.4);
+}
+
+nav.sticky ul li a {
+  color: var(--text);
+  border: none;
+}
+
+nav.sticky ul li a:hover {
+  color: var(--ahover);
+}
+
+.navbar-name {
+  padding-left: 5rem;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.navbar-content {
+  display: flex;
+  height: 5rem;
+  list-style-type: none;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5rem;
+  padding-right: 4rem;
+}
+
+.link-contain a {
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+}
+
+.link-contain a:hover {
+  border-bottom: 2px solid var(--primary);
+}
+
+/* .svg1 {
+  position: absolute;
+  height: 300px;
+  right: 0;
+  z-index: -1;
+  opacity: 50%;
+} */
+
+.container {
+  padding-top: 6rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.personal {
+  display: grid;
+  height: 300px;
+  padding-left: 8rem;
+}
+
+.image-contain {
+  padding-right: 4rem;
+  padding-left: 7rem;
+}
+
+.bigName {
+  font-size: 3rem;
+  margin-top: 7rem;
+}
+
+.Class {
+  font-size: 24px;
+  background: linear-gradient(87.84deg, #52799c -21.49%, #050144 104.49%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+p {
+  font-size: 1rem;
+}
+
+.button-contact {
+  margin-top: 1rem;
+  font-weight: 500;
+  color: var(--text);
+  box-shadow: 0 5px 15px 0 rgb(0 0 0 / 15%);
+  height: 45px;
+  width: 120px;
+  border-radius: 25px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--primary);
+  transition: 0.6s;
+  z-index: 200;
+}
+
+.button-contact a {
+  color: var(--text);
+}
+
+.button-contact:hover {
+  background-color: var(--second);
+}
+
+.containerTwo {
+  height: 100vh;
+  background: rgb(231, 231, 231);
+}
+
+/* .svg-section-2 {
+  position: relative;
+  rotate: 180deg;
+  top: -20px;
+  z-index: -2;
+} */
+
+.sosial-medias {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--text);
+  box-shadow: rgb(100 100 111 / 40%) 0 7px 29px 0;
+  padding: 0.5rem;
+}
+
+.sosial-media {
+  width: 5rem;
+  display: grid;
+  grid-template-rows: 10px;
+}
+
+.sosial-media-icon a {
+  width: 100%;
+  display: block;
+  padding: 1rem;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+  display: grid;
+  place-content: center;
+}
+
+.sosial-media-icon a:hover {
+  background-color: var(--ahover);
+  transition: 0.6s;
+}
+
+.sosial-media-icon img {
+  width: 20px;
+}
+
+.toggle {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.toggle-switch {
+  display: inline-block;
+  background: #ccc;
+  border-radius: 16px;
+  width: 58px;
+  height: 32px;
+  position: relative;
+  vertical-align: middle;
+  transition: background 0.25s;
+}
+.toggle-switch:before, .toggle-switch:after {
+  content: "";
+}
+.toggle-switch:before {
+  display: block;
+  background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  transition: left 0.25s;
+}
+.toggle:hover .toggle-switch:before {
+  background: linear-gradient(to bottom, #fff 0%, #fff 100%);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+}
+.toggle-checkbox:checked + .toggle-switch {
+  background: var(--primary);
+}
+.toggle-checkbox:checked + .toggle-switch:before {
+  left: 30px;
+}
+
+.toggle-checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+
+.toggle-label {
+  margin-left: 5px;
+  position: relative;
+  top: 2px;
+}
+/* .container2 {
+  padding-top: 7rem;
+  background-color: #ffffff;
+  height: 1vh;
+  text-align: center;
+}
+.container2sub {
+  padding-top: 3rem;
+  text-align: left;
+  width: 600px;
+  margin: 0 auto;
+}
+.get {
+  text-align: center;
+}
+
+.skill {
+  background-color: var(--ahover);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+}
+
+.skill-card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 0 auto;
+  background: var(--primary);
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  margin-top: 30rem;
+} */
+
+/* .card-hover {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 0 auto;
+  background: var(--text);
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+.skill-card:hover .card-hover {
+      height: 60px;
+    } */
